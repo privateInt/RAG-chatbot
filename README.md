@@ -17,3 +17,33 @@
 - docker-compose.yml을 사용해 container작동 후 자동으로 서버와 데모 페이지를 띄울 수 있다.
 
 # 파일 구조
+.
+├── app.py
+├── data
+│   ├── kullm_custom_data_240228_for_retriever_dst.p
+│   ├── kullm_custom_data_240228_for_retriever_src.p
+│   ├── kullm_custom_data_240228.json
+│   ├── kullm_custom_data_240228_passage_index.dpr
+│   ├── kullm_custom_data_240228_passage_index_meta.dpr
+│   ├── kullm_custom_data_240228_test_0.2.p
+│   ├── kullm_custom_data_240228_train_0.8.p
+│   └── kullm_custom_data_240228.xlsx
+├── docker-compose.yml
+├── Dockerfile
+├── DPR
+│   ├── DPR_data.py
+│   ├── DPR_inference.py
+│   ├── DPR_make_passage_vector.py
+│   ├── DPR_model.py
+│   ├── DPR_test.py
+│   ├── DPR_trainer.py
+├── LLM
+│   ├── LLM_extract_data.py
+│   ├── LLM_prompter.py
+│   ├── LLM_trainer.py
+│   └── templates
+│       └── kullm.json
+├── requirements.txt
+├── run.sh
+├── server.py
+└── utils.py
