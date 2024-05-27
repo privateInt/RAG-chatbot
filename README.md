@@ -39,29 +39,14 @@ project
 │   ├── DPR_model.py
 │   ├── DPR_test.py
 │   ├── DPR_trainer.py
-│   └── __pycache__
-│       ├── DPR_data.cpython-310.pyc
-│       ├── DPR_data.cpython-38.pyc
-│       ├── DPR_inference.cpython-38.pyc
-│       ├── DPR_make_passage_vector.cpython-310.pyc
-│       ├── DPR_make_passage_vector.cpython-38.pyc
-│       ├── DPR_model.cpython-310.pyc
-│       └── DPR_model.cpython-38.pyc
 ├── LLM
 │   ├── LLM_extract_data.py
 │   ├── LLM_prompter.py
 │   ├── LLM_trainer.py
-│   ├── __pycache__
-│   │   ├── LLM_extract_data.cpython-38.pyc
-│   │   ├── LLM_prompter.cpython-310.pyc
-│   │   └── LLM_prompter.cpython-38.pyc
 │   └── templates
 │       └── kullm.json
-├── __pycache__
-│   └── utils.cpython-38.pyc
 ├── requirements.txt
 ├── run.sh
 ├── server.py
-├── test.txt
 └── utils.py
 ```
