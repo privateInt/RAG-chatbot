@@ -1,7 +1,7 @@
 # Reference
 
-- [LLM]<https://github.com/nlpai-lab/KULLM>
-- [DPR]<https://github.com/TmaxEdu/KorDPR>
+- [LLM](https://github.com/nlpai-lab/KULLM)
+- [DPR](https://github.com/TmaxEdu/KorDPR)
 
 # 개발내용
 
