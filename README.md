@@ -14,7 +14,7 @@
 - DPR을 fine-tuning 할 수 있다. encoder 2개를 사용했으며 2개다 klue/bert-base를 tokenizer로 사용한다. bert계열이면 교체 가능핟. (default: klue/bert-base)
 - user input(질문)입력시 user input과 유사한 참조문서를 검색(cosine similarity)및 참조하여 답변한 정보를 response로 return하는 서버(flask)를 띄울 수 있다.
 - user input(질문)을 입력하고 response를 화면에 출력하는 데모 페이지(streamlit)를 띄울 수 있다.
-- fine-tining 결과를 docker image로 build 할 수 있다.
+- fine-tining 결과 및 서버, 데모 페이지를 docker image로 build 할 수 있다.
 - docker-compose.yml을 사용해 container작동 후 자동으로 서버와 데모 페이지를 띄울 수 있다.
 
 # 파일 구조
@@ -50,3 +50,16 @@ project
 ├── server.py
 └── utils.py
 ```
+
+# 폴더 및 파일 역할
+| 폴더 및 파일 | 설명 |
+|------|--------|
+|data|fine-tuning 및 RAG 대상 파일을 저장하는 폴더, 현재 xlsx파일을 읽고 처리하는 방식이며, xlsx파일의 column에는 출처,제시문,질문,답변이 포함돼야 한다.
+|DPR|DPR 관련 코드 저장|
+|DPR/DPR_data.py|데이터 parsing 및 pytorch dataloader에 load할 수 있게 가공한다.|
+|DPR/DPR_model.py|DPR model을 정의한 파일, 모델은 질문(query)과 제시문(passage)를 각각의 encoder로 처리한다.|
+|DPR/DPR_trainer.py|데이터를 사용해 DPR model을 fine-tuning한다. tensorboard 및 log 기록 기능을 추가해 loss를 확인할 수 있다. loss는 CE를 사용했다.|
+|DPR/DPR_make_passage_vector|fine-tuned DPR model을 사용해 RAG target data를 vector로 변환해 faiss(vector DB)에 저장한다.|
+|DPR/DPR_test.py|fine-tuned DPR model의 정확도를 확인한다. 계산방법은 질문 입력시 매칭하는 제시문(passage)이 GT와 일치하는지 비교한다.|
+|||
+|||
