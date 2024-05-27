@@ -66,7 +66,7 @@ project
 |LLM/LLM_prompter.py|LLM fine-tuning 및 inference시 입력 데이터를 지정한 prompt형태로 변경한다.|
 |LLM/LLM_trainer.py|LLM을 fine-tuning하여 결과를 bin파일로 저장한다.|
 |templates|LLM fine-tuning 및 inference시 사용하는 prompt를 저장하는 폴더|
-|templates/kullm.json||
+|templates/kullm.json|prompt engineering에 대한 정보가 담겨 입력 데이터를 가공하는 json파일|
 |requirements.txt|project 작동시 필요한 library를 모아놓은 txt파일|
 |server.py|DPR, LLM의 fine-tuning 결과를 이용해 inference server(flask)를 작동|
 |app.py|inference server에 입력값을 전송하고 return값을 출력하는 데모 페이지(streamlit)작동|
