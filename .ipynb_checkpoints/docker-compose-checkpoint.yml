@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  kullm:
+    container_name: kullm
+    image: kullm:ver2
+    devices:
+      - /dev/fuse
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - "/home/ubuntu/.cache/huggingface/hub:/root/.cache/huggingface/hub"
+    ipc: host
+    ports:
+      - "18000:18000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            device_ids: ['0', '1', '2', '3']
+            capabilities: [gpu]
+            
+    command: bash -c "sh run.sh && tail -f /dev/null" 
+    restart: always
