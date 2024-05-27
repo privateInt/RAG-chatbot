@@ -19,11 +19,48 @@
 
 # 파일 구조
 
-├─해당언어
-│  │  README.md
-│  ├─docs
-│  │      01-문서.md
-│  │      02-문서.md
-│  └─images
-│          이미지
-│          이미지
+project
+├── app.py
+├── data
+│   ├── kullm_custom_data_240228_for_retriever_dst.p
+│   ├── kullm_custom_data_240228_for_retriever_src.p
+│   ├── kullm_custom_data_240228.json
+│   ├── kullm_custom_data_240228_passage_index.dpr
+│   ├── kullm_custom_data_240228_passage_index_meta.dpr
+│   ├── kullm_custom_data_240228_test_0.2.p
+│   ├── kullm_custom_data_240228_train_0.8.p
+│   └── kullm_custom_data_240228.xlsx
+├── docker-compose.yml
+├── Dockerfile
+├── DPR
+│   ├── DPR_data.py
+│   ├── DPR_inference.py
+│   ├── DPR_make_passage_vector.py
+│   ├── DPR_model.py
+│   ├── DPR_test.py
+│   ├── DPR_trainer.py
+│   └── __pycache__
+│       ├── DPR_data.cpython-310.pyc
+│       ├── DPR_data.cpython-38.pyc
+│       ├── DPR_inference.cpython-38.pyc
+│       ├── DPR_make_passage_vector.cpython-310.pyc
+│       ├── DPR_make_passage_vector.cpython-38.pyc
+│       ├── DPR_model.cpython-310.pyc
+│       └── DPR_model.cpython-38.pyc
+├── LLM
+│   ├── LLM_extract_data.py
+│   ├── LLM_prompter.py
+│   ├── LLM_trainer.py
+│   ├── __pycache__
+│   │   ├── LLM_extract_data.cpython-38.pyc
+│   │   ├── LLM_prompter.cpython-310.pyc
+│   │   └── LLM_prompter.cpython-38.pyc
+│   └── templates
+│       └── kullm.json
+├── __pycache__
+│   └── utils.cpython-38.pyc
+├── requirements.txt
+├── run.sh
+├── server.py
+├── test.txt
+└── utils.py
