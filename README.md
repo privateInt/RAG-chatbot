@@ -1,11 +1,12 @@
+# 개발내용
+
+- LLM과 DPR(vector retrieval)을 refactoring 및 합치는 과정을 통해 QA task RAG pipeline제작
+
 # Reference
 
 - [LLM](https://github.com/nlpai-lab/KULLM)
 - [DPR](https://github.com/TmaxEdu/KorDPR)
 
-# 개발내용
-
-- LLM과 DPR(vector retrieval)을 refactoring 및 합치는 과정을 통해 QA task RAG pipeline제작
 
 # 기능
 
