@@ -18,7 +18,7 @@
 - docker-compose.yml을 사용해 container작동 후 자동으로 서버와 데모 페이지를 띄울 수 있다.
 
 # 파일 구조
-`
+```sh
 project
 ├── app.py
 ├── data
@@ -64,4 +64,4 @@ project
 ├── server.py
 ├── test.txt
 └── utils.py
-`
+```
