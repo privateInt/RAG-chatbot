@@ -73,3 +73,9 @@ project
 |run.sh|inference server와 데모 페이지를 한번에 작동하는 shell script 명령어 파일|
 |Dokcerfile|project 결과를 docker image로 build할 수 있도록 명령어들을 모아놓은 파일|
 |docker-compose.yml|docker image가 build되면 바로 사용할 수 있도록 mount, gpu, 명령어 등을 정의해놓은 yml파일|
+
+# 학습 실험
+
+## DPR
+| 폴더 및 파일 | 설명 |
+|------|--------|
