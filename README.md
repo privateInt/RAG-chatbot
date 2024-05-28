@@ -131,4 +131,15 @@ project
     <!-- Cell 2 is merged with the cell above -->
     <td>python DPR_trainer.py</td>
   </tr>
+  <tr>
+    <td rowspan="3">LLM 학습</td>
+    <td>cd [YOUR WORKSPACE]</td>
+  </tr>
+    <!-- Cell 2 is merged with the cell above -->
+    <td>cd LLM</td>
+  </tr>
+  <tr>
+    <!-- Cell 2 is merged with the cell above -->
+    <td>python LLM_trainer.py</td>
+  </tr>
 </table>
