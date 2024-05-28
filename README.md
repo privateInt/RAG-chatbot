@@ -115,28 +115,20 @@ project
 
 # 명령어
 
-<table style="border: 2px;">
+<table border="1">
   <tr>
-    <td> 내용 </td>
-    <td> 명령어 </td>
-  </tr><tr>
-    <td> 환경 설치 </td>
-    <td> pip install -r requirements.txt </td>
-  </tr><tr>
-    <td rowspan="3"> DPR 학습 </td>
-  </tr><tr>
-    <td> cd [YOUR WORKSPACE] </td>
-  </tr><tr>
-    <td> cd DPR </td>
-  </tr><tr>
-    <td> python DPR_trainer.py </td>
-  </tr><tr>
-    <td rowspan="3"> LLM 학습 </td>
-  </tr><tr>
-    <td> cd [YOUR WORKSPACE] </td>
-  </tr><tr>
-    <td> cd LLM </td>
-  </tr><tr>
-    <td> python LLM_trainer.py </td>
+    <th>내용</th>
+    <th>명령어</th>
+  </tr>
+  <tr>
+    <td rowspan="3">Row 1, Cell 2 (Rowspan 3)</td>
+    <td>Row 1, Cell 3</td>
+  </tr>
+    <!-- Cell 2 is merged with the cell above -->
+    <td>Row 2, Cell 3</td>
+  </tr>
+  <tr>
+    <!-- Cell 2 is merged with the cell above -->
+    <td>Row 3, Cell 3</td>
   </tr>
 </table>
