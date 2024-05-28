@@ -123,12 +123,15 @@ project
     <td> 환경 설치 </td>
     <td> pip install -r requirements.txt </td>
   </tr><tr>
-    <td> 컨텐츠 내용5 </td>
-    <td colspan="2"> 컨텐츠 내용6 </td>
+    <td rowspan="3"> DPR 학습 </td>
   </tr><tr>
-    <td rowspan="3"> 컨텐츠 내용7 </td>
+    <td> cd [YOUR WORKSPACE] </td>
+    <td> 컨텐츠 내용9-1 </td>
   </tr><tr>
-    <td> 컨텐츠 내용8-1 </td>
+    <td> cd DPR </td>
+    <td> 컨텐츠 내용9-1 </td>
+  </tr><tr>
+    <td> python DPR_trainer.py </td>
     <td> 컨텐츠 내용9-1 </td>
   </tr><tr>
     <td> 컨텐츠 내용8-2 </td>
