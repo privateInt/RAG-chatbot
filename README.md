@@ -201,6 +201,8 @@ project
 ## chain of thought
 - prompt를 단계별로 제공하여 LLM이 문제를 쉽게 이해할 수 있도록 조치 필요
 
-## 더 살펴봐야 하는 논문
+## 더 살펴보고 싶은 논문 및 내용
 - Self-RAG
 - Re-ranker
+- DPO trainer
+- RLHF (RM, PPO)
