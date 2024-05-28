@@ -1,7 +1,7 @@
-# 개발내용
+# 프로젝트 목적
 
 - LLM과 DPR(vector retrieval)을 refactoring 및 합치는 과정을 통해 QA task RAG pipeline제작
-- 이 project에서는 관세에 관련된 주제를 다루며 데이터 형식을 맞춘다면 다른 domain에도 적용 가능
+- 이 project에서는 관세에 관련된 주제를 다루며, 데이터 형식을 맞춘다면 다른 domain에도 적용 가능
 
 # Reference
 
