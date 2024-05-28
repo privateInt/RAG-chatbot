@@ -171,4 +171,28 @@ project
 - 데이터 부분: 이 project에서는 사람이 직접 데이터를 제작했다. 추후 일반화하기 위해서는 데이터 추출 자동화가 선행돼야 한다.
 - Retrieval 성능: top1의 acc는 30%에 그쳤다. Retrieval 성능을 올리기 위해 BM25같은 sparse retriever와 ensemble retriever 구축이 필요하다. 또한 보조 모델을 활용하는 등 topK가 커져도 gold passage를 추출하는 기능이 필요하다.
 - LLM 성능: Retrieval이 잘못된 정보를 전달할 경우 LLM이 필터링할 수 있어야 한다.
-- 
+
+# 앞으로의 방향
+
+![Cap 2024-02-13 16-59-36-937](https://github.com/privateInt/RAG-chatbot/assets/95892797/d6161384-2ccf-4b8b-b644-cf5fe1da77de)
+
+![Cap 2024-02-13 17-00-56-248](https://github.com/privateInt/RAG-chatbot/assets/95892797/1778fc2f-26f0-42b1-a878-fb4e0a2a5fe9)
+
+## 데이터 pipeline
+- 문서에는 자연어와 표, 이미지 등이 섞여있음
+- 표의 경우 MD, HTML 등의 형태로 변경하는 등 LLM 학습 가능한 형태로 1차 가공 필요
+- 1차 가공이 끝난 데이터를 출처,제시문,질문,답변 등으로 구분하는 2차 가공 필요
+
+## advanced RAG
+- Multi-Query: 질문 표현 방식에 따라 retrieval 성능이 바뀌므로 같은 의미지만 다른 표현을 여러개 생성하여 retriever 필요
+- Self-Query: 조건식으로 검색 대상을 최대한 좁힌 후 retriever 시행
+- Time-Weighted: meta data(문서 생성 시기, 문서 종류 등)를 활용해 검색 대상을 최대한 좁힌 후 retriever 시행
+- Ensemble-Retriever: sparse retriever의 성능이 더 좋은 경우가 존재하기 때문에 구축 필요
+- Long Context Reorder: 연관성이 높은 문서를 일부러 맨앞, 맨뒤에 Reorder
+
+![Cap 2024-02-14 12-21-48-066](https://github.com/privateInt/RAG-chatbot/assets/95892797/3214e493-fb28-4af1-a190-8f7e9dac049d)
+
+## graph DB
+- advanced RAG만으로 Retriever 성능이 부족할 수 있음, 추가 retriever system 구축이 필요함
+- graph DB는 노드와 엣지로 이루어짐
+- 키워드 추출 모델을 
