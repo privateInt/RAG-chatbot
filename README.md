@@ -160,3 +160,15 @@ project
   </tr>
   
 </table>
+
+# 데모 페이지 예시
+
+![Cap 2024-05-25 14-55-04-185](https://github.com/privateInt/RAG-chatbot/assets/95892797/1357398d-5ac2-4492-8f51-adad63d75b20)
+
+
+# 한계 및 극복방안
+
+- 데이터 부분: 이 project에서는 사람이 직접 데이터를 제작했다. 추후 일반화하기 위해서는 데이터 추출 자동화가 선행돼야 한다.
+- Retrieval 성능: top1의 acc는 30%에 그쳤다. Retrieval 성능을 올리기 위해 BM25같은 sparse retriever와 ensemble retriever 구축이 필요하다. 또한 보조 모델을 활용하는 등 topK가 커져도 gold passage를 추출하는 기능이 필요하다.
+- LLM 성능: Retrieval이 잘못된 정보를 전달할 경우 LLM이 필터링할 수 있어야 한다.
+- 
