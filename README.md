@@ -121,14 +121,14 @@ project
     <th>명령어</th>
   </tr>
   <tr>
-    <td rowspan="3">Row 1, Cell 2 (Rowspan 3)</td>
-    <td>Row 1, Cell 3</td>
+    <td rowspan="3">DPR 학습</td>
+    <td>cd [YOUR WORKSPACE]</td>
   </tr>
     <!-- Cell 2 is merged with the cell above -->
-    <td>Row 2, Cell 3</td>
+    <td>cd DPR</td>
   </tr>
   <tr>
     <!-- Cell 2 is merged with the cell above -->
-    <td>Row 3, Cell 3</td>
+    <td>python DPR_trainer.py</td>
   </tr>
 </table>
