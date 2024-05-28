@@ -194,5 +194,13 @@ project
 
 ## graph DB
 - advanced RAG만으로 Retriever 성능이 부족할 수 있음, 추가 retriever system 구축이 필요함
-- graph DB는 노드와 엣지로 이루어짐
-- 키워드 추출 모델을 
+- graph DB는 노드(키워드)와 엣지(관계)로 이루어짐
+- 관계 정의 가이드라인 필요
+- 키워드 추출 가이드라인 필요
+
+## chain of thought
+- prompt를 단계별로 제공하여 LLM이 문제를 쉽게 이해할 수 있도록 조치 필요
+
+## 더 살펴봐야 하는 논문
+- self-RAG
+- re-rank
