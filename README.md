@@ -131,7 +131,12 @@ project
   </tr><tr>
     <td> python DPR_trainer.py </td>
   </tr><tr>
-    <td> 컨텐츠 내용8-2 </td>
-    <td> 컨텐츠 내용9-2 </td>
+    <td rowspan="3"> LLM 학습 </td>
+  </tr><tr>
+    <td> cd [YOUR WORKSPACE] </td>
+  </tr><tr>
+    <td> cd LLM </td>
+  </tr><tr>
+    <td> python LLM_trainer.py </td>
   </tr>
 </table>
