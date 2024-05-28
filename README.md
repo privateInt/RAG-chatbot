@@ -126,13 +126,10 @@ project
     <td rowspan="3"> DPR 학습 </td>
   </tr><tr>
     <td> cd [YOUR WORKSPACE] </td>
-    <td> 컨텐츠 내용9-1 </td>
   </tr><tr>
     <td> cd DPR </td>
-    <td> 컨텐츠 내용9-1 </td>
   </tr><tr>
     <td> python DPR_trainer.py </td>
-    <td> 컨텐츠 내용9-1 </td>
   </tr><tr>
     <td> 컨텐츠 내용8-2 </td>
     <td> 컨텐츠 내용9-2 </td>
