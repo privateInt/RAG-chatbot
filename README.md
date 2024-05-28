@@ -121,6 +121,10 @@ project
     <th>명령어</th>
   </tr>
   <tr>
+    <td>환경 설치</td>
+    <td>pip install -r requirements.txt</td>
+  </tr>
+  <tr>
     <td rowspan="3">DPR 학습</td>
     <td>cd [YOUR WORKSPACE]</td>
   </tr>
