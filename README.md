@@ -142,4 +142,21 @@ project
     <!-- Cell 2 is merged with the cell above -->
     <td>python LLM_trainer.py</td>
   </tr>
+  <tr>
+    <td>run server & demo page</td>
+    <td>sh run.sh</td>
+  </tr>
+  <tr>
+    <td rowspan="2">docker image build</td>
+    <td>cd [YOUR WORKSPACE]</td>
+  </tr>
+  <tr>
+    <!-- Cell 2 is merged with the cell above -->
+    <td>docker build -t kullm:ver2 .</td>
+  </tr>
+  <tr>
+    <td>docker container start</td>
+    <td>docker-compose up -d</td>
+  </tr>
+  
 </table>
