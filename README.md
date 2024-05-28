@@ -112,3 +112,15 @@ project
 - GPU memory usage(inference): 약 56GiB
 - lora값에 따라 trainable parameter가 결정됐다. lora논문에 의하면 trainable parameter가 0.2%여도 성능에 큰 차이가 없다는 사실을 확인하기 위해, lora_r의 값은 32, 3072로 조정하여 각 trainable parameter를 0.2%, 16.3%로 변경하여 fine-tuning 성능을 비교했지만 큰 차이를 발견할 수 없었다.
 - 데이터 수와 품질의 관계를 파악하기 위해 데이터 수가 많지만 품질이 떨어지는 데이터셋, 데이터 수가 적지만 품질이 좋은 데이터셋을 각각 fine-tuning하여 성능을 비교했다. 비교 결과 데이터 수가 적더라도 품질이 뛰어나야 LLM의 성능에 긍정적이라는 사실을 확인했다.
+
+# 명령어
+
+| 내용 | 명령어 |
+|------|--------|
+|환경 설치|pip install -r requirements.txt|
+|DPR 학습|cd [YOUR WORKSPACE]|
+||cd DPR|
+||python DPR_trainer.py|
+|||
+|||
+|||
