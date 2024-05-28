@@ -60,7 +60,7 @@ project
 |DPR/DPR_model.py|DPR model을 정의한 파일, 모델은 질문(query)과 제시문(passage)를 각각의 encoder로 처리한다.|
 |DPR/DPR_trainer.py|데이터를 사용해 DPR model을 fine-tuning한다. tensorboard 및 log 기록 기능을 추가해 loss를 확인할 수 있다. loss는 CE를 사용했다.|
 |DPR/DPR_make_passage_vector|fine-tuned DPR model을 사용해 RAG target data를 vector로 변환해 faiss(vector DB)에 저장한다. (passage_index.dpr, passage_index_meta.dpr, for_retriever_dst.p)|
-|DPR/DPR_test.py|fine-tuned DPR model의 정확도를 확인한다. 계산방법은 질문 입력시 매칭하는 제시문(passage)이 GT와 일치하는지 비교한다.|
+|DPR/DPR_test.py|fine-tuned DPR model의 정확도를 확인한다. 계산방법은 질문 입력시 매칭하는 제시문(passage)이 GT와 일치하는지 비교한다. top_k는 1,3의 경우에 대해 각각 진행하였다.|
 |LLM|LLM 관련 코드 저장|
 |LLM/LLM_extract_data.py|data폴더에 저장된 xlsx파일을 fine-tuning 가능하도록 json에 intruction, input, output형태로 저장한다.|
 |LLM/LLM_prompter.py|LLM fine-tuning 및 inference시 입력 데이터를 지정한 prompt형태로 변경한다.|
@@ -74,8 +74,36 @@ project
 |Dokcerfile|project 결과를 docker image로 build할 수 있도록 명령어들을 모아놓은 파일|
 |docker-compose.yml|docker image가 build되면 바로 사용할 수 있도록 mount, gpu, 명령어 등을 정의해놓은 yml파일|
 
+# 하드웨어 스펙
+- GPU: A100(40GiB)GPU * 4
+- 저장 모델 용량: DPR=2.5GB, LLM=9.5GB
+
 # 학습 실험
 
 ## DPR
-| 폴더 및 파일 | 설명 |
+- hyper parameter
+| hyper parameter | value |
 |------|--------|
+|epochs|20|
+|batch_size|16|
+|learning_rate|3e-4|
+|passage_chunk_size|100|
+- GPU memory usage(fine-tuning): 약 25GiB
+- GPU memory usage(inference): 약 4GiB
+- DPR 논문에 의하면 batch_size를 크게할 수록 negative sample을 증가시켜 fine-tuning 성능을 향상시킬 수 있다.
+- DPR 논문에 의하면 passage를 chunk_size로 분할하여 검색한다. 이 project에서는 정보 손실을 고려하여 분할된 chunk를 원복하여 LLM에 제공한다.
+
+## LLM
+- hyper parameter
+| hyper parameter | value |
+|------|--------|
+|lora_r|32|
+|lora_alpha|lora_r * 2|
+|epochs|20|
+|batch_size|128|
+|micro_batch_size|8|
+|learning_rate|3e-5|
+- GPU memory usage(fine-tuning): 약 60GiB
+- GPU memory usage(inference): 약 56GiB
+- lora값에 따라 trainable parameter가 결정됐다. lora논문에 의하면 trainable parameter가 0.2%여도 성능에 큰 차이가 없다는 사실을 확인하기 위해, lora_r의 값은 32, 3072로 조정하여 각 trainable parameter를 0.2%, 16.3%로 변경하여 fine-tuning 성능을 비교했지만 큰 차이를 발견할 수 없었다.
+- 데이터 수와 품질의 관계를 파악하기 위해 데이터 수가 많지만 품질이 떨어지는 데이터셋, 데이터 수가 적지만 품질이 좋은 데이터셋을 각각 fine-tuning하여 성능을 비교했다. 비교 결과 데이터 수가 적더라도 품질이 뛰어나야 LLM의 성능에 긍정적이라는 사실을 확인했다.
