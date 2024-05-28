@@ -202,5 +202,5 @@ project
 - prompt를 단계별로 제공하여 LLM이 문제를 쉽게 이해할 수 있도록 조치 필요
 
 ## 더 살펴봐야 하는 논문
-- self-RAG
-- re-rank
+- Self-RAG
+- Re-ranker
