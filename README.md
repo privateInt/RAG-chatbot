@@ -117,11 +117,11 @@ project
 
 <table style="border: 2px;">
   <tr>
-    <td> 컨텐츠 내용1 </td>
-    <td> 컨텐츠 내용2 </td>
-    <td> 컨텐츠 내용3 </td>
+    <td> 내용 </td>
+    <td> 명령어 </td>
   </tr><tr>
-    <td colspan="3"> 컨텐츠 내용4 </td>
+    <td> 환경 설치 </td>
+    <td> pip install -r requirements.txt </td>
   </tr><tr>
     <td> 컨텐츠 내용5 </td>
     <td colspan="2"> 컨텐츠 내용6 </td>
