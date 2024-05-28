@@ -76,7 +76,7 @@ project
 
 # 하드웨어 스펙
 - GPU: A100(40GiB)GPU * 4
-- 저장 모델 용량: DPR=2.5GB, LLM=9.5GB
+- 저장 모델 용량: DPR 2.5GB, LLM 9.5GB
 
 # 학습 실험
 
