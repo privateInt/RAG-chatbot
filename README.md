@@ -81,7 +81,7 @@ project
 - python 3.8
 - CUDA Version 12.0
 - Nvidia Driver Version 525.105.17
-- 
+  
 ![Cap 2024-05-30 09-31-10-647](https://github.com/privateInt/RAG-chatbot/assets/95892797/72d2fe19-8af6-4dc0-993e-9b6c958173d7)
 
 # 학습 실험
