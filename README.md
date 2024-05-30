@@ -75,9 +75,14 @@ project
 |Dokcerfile|project 결과를 docker image로 build할 수 있도록 명령어들을 모아놓은 파일|
 |docker-compose.yml|docker image가 build되면 바로 사용할 수 있도록 mount, gpu, 명령어 등을 정의해놓은 yml파일|
 
-# 하드웨어 스펙
+# 환경
 - GPU: A100(40GiB)GPU * 4
 - 저장 모델 용량: DPR 2.5GB, LLM 9.5GB
+- python 3.8
+- CUDA Version 12.0
+- Nvidia Driver Version 525.105.17
+- 
+![Cap 2024-05-30 09-31-10-647](https://github.com/privateInt/RAG-chatbot/assets/95892797/72d2fe19-8af6-4dc0-993e-9b6c958173d7)
 
 # 학습 실험
 
