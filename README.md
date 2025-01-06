@@ -60,7 +60,8 @@ project
 |DPR/DPR_data.py|데이터 parsing 및 pytorch dataloader에 load할 수 있게 가공하여 pickle로 저장한다. (train.p, test.p, for_retriever_src.p)|
 |DPR/DPR_model.py|DPR model을 정의한 파일, 모델은 질문(query)과 제시문(passage)를 각각의 encoder로 처리한다.|
 |DPR/DPR_trainer.py|데이터를 사용해 DPR model을 fine-tuning한다. tensorboard 및 log 기록 기능을 추가해 loss를 확인할 수 있다. loss는 CE를 사용했다.|
-|DPR/DPR_make_passage_vector|fine-tuned DPR model을 사용해 RAG target data를 vector로 변환해 faiss(vector DB)에 저장한다. (passage_index.dpr, passage_index_meta.dpr, for_retriever_dst.p)|
+|DPR/DPR_make_passage_vector.py|fine-tuned DPR model을 사용해 RAG target data를 vector로 변환해 faiss(vector DB)에 저장한다. (passage_index.dpr, passage_index_meta.dpr, for_retriever_dst.p)|
+|DPR/DPR_inference.py|fine-tuned DPR model을 사용해 질문 입력시 faiss(vector DB)에서 chunk를 search후 chunk의 원본 데이터를 읽어온다.|
 |DPR/DPR_test.py|fine-tuned DPR model의 정확도를 확인한다. 계산방법은 질문 입력시 매칭하는 제시문(passage)이 GT와 일치하는지 비교한다. top_k는 1,3의 경우에 대해 각각 진행하였다.|
 |LLM|LLM 관련 코드 저장|
 |LLM/LLM_extract_data.py|data폴더에 저장된 xlsx파일을 fine-tuning 가능하도록 json에 intruction, input, output형태로 저장한다.|
